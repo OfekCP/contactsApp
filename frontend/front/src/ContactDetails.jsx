@@ -33,7 +33,7 @@ const ContactDetails = () => {
 
   const handleUpdateContact = async () => {
     try {
-      await axios.post(`import.meta.env.VITE_API_URL/contacts/${id}/update`, updatedContact);
+      await axios.post(`${import.meta.env.VITE_API_URL}/contacts/${id}/update`, updatedContact);
       fetchContact(); 
       setIsEditing(false); 
     } catch (error) {
