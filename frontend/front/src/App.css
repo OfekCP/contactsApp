@@ -1,0 +1,165 @@
+.app-container {
+  text-align: center;
+}
+
+.phone-frame {
+  width: 25vw; 
+  height: 75vh; 
+  background-color: #ccc;
+  margin: 10vh auto;
+border-radius: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen{
+  width: 95%;
+  height: 70%;
+  background-color: white;
+  overflow-y:  auto;
+}
+li{
+  cursor: pointer;
+}
+.speaker{
+  width: 6%;
+  height: 0.5%;
+  background-color: black;
+  position: absolute;
+  bottom: 78vh;
+  right: 48vw;
+  opacity:0.6;
+}
+.frontCamera{
+  background-color: black;
+  position: absolute;
+  width:0.4%;
+  height:0.8%;
+  border-radius: 50%;
+  bottom: 77.8vh;
+  left: 51.2vw;
+}
+.button{
+  background-color: #ccc;
+  width: 4%;
+  height: 7.8%;
+  border-color: rgb(255, 255, 255) ;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.1vw solid black;
+  top: 83vh;
+  cursor: pointer;
+}
+.button1{
+  background-color: #ccc;
+  width: 4%;
+  height: 7.8%;
+  border-color: rgb(255, 255, 255) ;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.1vw solid black;
+  top: 83vh;
+  right: 47.4vw;
+  cursor: pointer;
+}
+li {
+  cursor: pointer;
+  list-style: none;
+  padding: 8px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #e0e0e0;
+}
+
+input {
+  width: 80%;
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.button-delete {
+  background-color: #ff4d4d;
+}
+.button-delete:hover {
+  background-color: #e63946;
+}
+ul{
+  padding: 0;
+}
+
+.screen::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.screen::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+
+.screen {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.screen p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.screen h2 {
+  font-size: 24px;
+  color: #4CAF50; 
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+.screen button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.screen button:hover {
+  background-color: #45a049;
+}
+
+/* Style for Cancel button in editing mode */
+.screen button:last-child {
+  background-color: #ccc;
+  color: #333;
+}
+
+.screen button:last-child:hover {
+  background-color: #bbb;
+}
+.create{
+  font-size: large;
+}
