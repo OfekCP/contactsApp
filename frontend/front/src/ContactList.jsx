@@ -14,7 +14,7 @@ const ContactList = () => {
 
   const fetchContacts = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/contacts');
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/contacts`);
       const sortedContacts = response.data.sort((a, b) =>
         a.contactName.localeCompare(b.contactName)
       );

@@ -13,7 +13,7 @@ const CallingScreen = () => {
 
   const fetchContact = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/contacts/${id}`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/contacts/${id}`);
       setContact(response.data);
     } catch (error) {
       console.error(error);

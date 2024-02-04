@@ -19,7 +19,7 @@ const ContactDetails = () => {
 
   const fetchContact = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/contacts/${id}`);
+      const response = await axios.get(`import.meta.env.VITE_API_URL/contacts/${id}`);
       setContact(response.data);
       setUpdatedContact({
         contactName: response.data.contactName,
@@ -33,7 +33,7 @@ const ContactDetails = () => {
 
   const handleUpdateContact = async () => {
     try {
-      await axios.post(`http://localhost:8000/contacts/${id}/update`, updatedContact);
+      await axios.post(`import.meta.env.VITE_API_URL/contacts/${id}/update`, updatedContact);
       fetchContact(); 
       setIsEditing(false); 
     } catch (error) {
@@ -43,7 +43,7 @@ const ContactDetails = () => {
 
   const handleDeleteContact = async () => {
     try {
-      await axios.delete(`http://localhost:8000/contacts/${id}/delete`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/contacts/${id}/delete`);
       navigate('/'); 
     } catch (error) {
       console.error(error);

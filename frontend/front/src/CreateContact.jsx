@@ -15,7 +15,7 @@ const CreateContact = () => {
     }
 
     try {
-      await axios.post('http://localhost:8000/contacts/create', newContact);
+      await axios.post(`${import.meta.env.VITE_API_URL}/contacts/create`, newContact);
       setNewContact({
         contactName: '',
         phoneNum: '',

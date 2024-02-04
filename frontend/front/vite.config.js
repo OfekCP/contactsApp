@@ -6,7 +6,7 @@ export default {
   // other config options...
   server: {
     proxy: {
-      '/contacts': 'http://localhost:8000',
+      '/contacts': `${import.meta.env.VITE_API_URL}`,
     },
   },
 };
