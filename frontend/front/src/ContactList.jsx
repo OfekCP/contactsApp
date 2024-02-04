@@ -25,7 +25,7 @@ const ContactList = () => {
   };
 
   const handleContactClick = (contact) => {
-    navigate(`/details/${contact._id}`);
+    navigate(`/${contact._id}`);
   };
 
   return (
