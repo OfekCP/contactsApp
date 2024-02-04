@@ -34,7 +34,7 @@ const App = () => {
             path="/create"
             element={<CreateContact onAddContact={fetchContacts} />}
           />
-         <Route path="/:id" element={<ContactDetails contacts={contacts} />} />
+         <Route path="/details/:id" element={<ContactDetails contacts={contacts} />} />
          <Route path="/calling/:id" element={<CallingScreen contacts={contacts} />} />
   </Routes>
   );

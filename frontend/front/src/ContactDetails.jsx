@@ -19,7 +19,7 @@ const ContactDetails = () => {
 
   const fetchContact = async () => {
     try {
-      const response = await axios.get(`import.meta.env.VITE_API_URL/contacts/${id}`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/contacts/${id}`);
       setContact(response.data);
       setUpdatedContact({
         contactName: response.data.contactName,
@@ -34,8 +34,8 @@ const ContactDetails = () => {
   const handleUpdateContact = async () => {
     try {
       await axios.post(`${import.meta.env.VITE_API_URL}/contacts/${id}/update`, updatedContact);
-      fetchContact(); 
-      setIsEditing(false); 
+      fetchContact();
+      setIsEditing(false);
     } catch (error) {
       console.error(error);
     }
@@ -44,7 +44,7 @@ const ContactDetails = () => {
   const handleDeleteContact = async () => {
     try {
       await axios.delete(`${import.meta.env.VITE_API_URL}/contacts/${id}/delete`);
-      navigate('/'); 
+      navigate('/');
     } catch (error) {
       console.error(error);
     }
@@ -120,9 +120,9 @@ const ContactDetails = () => {
             </>
           ) : (
             <>
-            <button onClick={toggleEditing}>Edit</button>
-            <button  onClick={() => handleClick(contact)}>call</button>
-          </>
+              <button onClick={toggleEditing}>Edit</button>
+              <button onClick={() => handleClick(contact)}>call</button>
+            </>
           )}
         </div>
         <Link to="/">
