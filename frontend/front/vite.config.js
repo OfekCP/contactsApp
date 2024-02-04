@@ -1,12 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 
 // https://vitejs.dev/config/
-export default {
-  // other config options...
+export default defineConfig({
+  plugins: [react()],
   server: {
     proxy: {
-      '/contacts':import.meta.env.VITE_API_URL,
+      '/contacts': process.env.VITE_API_URL,
     },
   },
-};
+});
